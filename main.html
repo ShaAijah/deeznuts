@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Astro</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .crystal-ball {
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(circle, #f1e5fc, #9595be);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 20px;
+                color: black;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+                margin-top: 20px;
+            }
+        </style>
+
+    </head>
+    <body class="MainPage">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="zodiacInput" placeholder="Enter Sign">
+                <button onclick="generateRandomContent()"><img src="search.png"></button>
+            </div>
+            <div class="crystal-ball" id="output">🔮 Your fortune awaits... 🔮</div>
+            <marquee class="star-marquee">✨ 🌟 Seek the wisdom of the stars 🌟 ✨</marquee>
+        </div>
+    </div>
+    <script>
+        function generateRandomContent() {
+            const zodiacMessages = {
+                aries: ["Aries, harness your fire energy today!", "Charge forward, but don't forget to breathe."],
+                taurus: ["Ground yourself in nature, Taurus.", "Indulge in life's simple pleasures today."],
+                gemini: ["Your words hold magic today, Gemini.", "Duality is your strength, embrace it."],
+                cancer: ["Feel your emotions deeply, but don’t dwell.", "Your intuition will guide you well today."],
+                leo: ["Shine your light brightly, Leo!", "Your confidence is magnetic today."],
+                virgo: ["Organization is your superpower today.", "Small details lead to big success, Virgo."],
+                libra: ["Find balance in the chaos today.", "Beauty and harmony surround you, embrace it."],
+                scorpio: ["Your passion is unmatched today, Scorpio.", "Trust your instincts, they won't fail you."],
+                sagittarius: ["Adventure is calling you, Sagittarius!", "Seek knowledge and expand your horizons."],
+                capricorn: ["Your discipline will bring rewards.", "Set your sights high, Capricorn!"],
+                aquarius: ["Innovate and inspire today.", "Your uniqueness is your power, embrace it!"],
+                pisces: ["Dream big, Pisces, the universe is listening.", "Your creativity is overflowing today."]
+            };
+            let input = document.getElementById("zodiacInput").value.toLowerCase();
+            let output = document.getElementById("output");
+            if (zodiacMessages[input]) {
+                let randomIndex = Math.floor(Math.random() * zodiacMessages[input].length);
+                output.textContent = zodiacMessages[input][randomIndex];
+            } else {
+                output.textContent = "Hmm... are you sure that’s a zodiac sign?";
+            }
+        }
+    </script>
+</body>
+</html>

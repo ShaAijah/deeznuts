@@ -1,0 +1,101 @@
+body.cosmic-background {
+    background: url('stars.jpg');
+    background-size: cover;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #f1e28b;
+    flex-direction: column;
+}
+
+body.MainPage {
+    background: url('stars.jpg');
+    background-size: cover;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.star-marquee {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f0df83;
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.cosmic-entrance {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(243, 224, 113);
+    color: #f3df70;
+}
+
+.cosmic-entrance h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.cosmic-entrance button {
+    font-size: 24px;
+    padding: 10px 20px;
+    background: #e7da90;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 11px 25px;
+    border: 2px solid #f3e7a3;
+    box-shadow: 0px 0px 30px rgb(235, 220, 140);
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 30px;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 22px;
+    color: #f3de6a;
+    text-align: center;
+}
+
+
+.search-bar button img{
+    width: 35px;
+}
+
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    background: #fae46a;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 1);
+}
